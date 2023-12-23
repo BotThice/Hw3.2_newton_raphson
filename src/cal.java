@@ -27,18 +27,26 @@ public class cal {
         }
     }
     public static Double cal1_3fxx(Double x,int subProb){ //1_3 mean subproblem 1-3
-        switch (subProb){
-            case 3: return 3*Math.pow(x,2);
-            case 2: return -Math.pow(Math.E,-x)-1;
-            default: return Double.MAX_VALUE;
+        switch (subProb) {
+            case 3:
+                return 3 * Math.pow(x, 2);
+            case 2:
+                return -Math.pow(Math.E, -x) - 1;
+            default:
+                System.err.println("Wrong subproblem input");
+                return Double.NaN;
         }
 
     }
     public static Double cal1_3fx(Double x,int subProb){
         switch (subProb){
-            case 3:return Math.pow(x,3)-48;
-            case 2:return Math.pow(Math.E,-x)-1;
-            default:return Double.MAX_VALUE;
+            case 3:
+                return Math.pow(x,3)-48;
+            case 2:
+                return Math.pow(Math.E,-x)-1;
+            default:
+                System.err.println("Wrong subproblem input");
+                return Double.NaN;
         }
 
     }
